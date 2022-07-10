@@ -1,0 +1,9 @@
+table .checkbox-cell {
+    width: 10px;
+}
+table .action-cell {
+    width: 90px;
+}
+table tr.completed td.text-cell{
+    text-decoration: line-through;
+}
