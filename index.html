@@ -9,9 +9,9 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <h1>Task Application</h1>
-      <table class="table table-sm">
+      <table class="table table-sm" id="task-table">
         <thead>
           <tr>
             <th class="checbox-cell">#</th>
@@ -20,42 +20,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="checbox-cell"><input type="checkbox"></td>
-            <td class="text-cell">Task Description 1</td>
-            <td class="action-cell">
-              <button class="btn btn-sm btn-success"><i class="bi bi-pencil-fill"></i></button>
-              <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td class="checbox-cell"><input type="checkbox"></td>
-            <td class="text-cell">Task Description 2 Long text example Task Description 2 Long text example Task Description 2 Long text example Task Description 2 Long text example Task Description 2 Long text example</td>
-            <td class="action-cell">
-              <button class="btn btn-sm btn-success"><i class="bi bi-pencil-fill"></i></button>
-              <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td class="checbox-cell"><input type="checkbox"></td>
-            <td class="text-cell">Task Description 3</td>
-            <td class="action-cell">
-              <button class="btn btn-sm btn-success"><i class="bi bi-pencil-fill"></i></button>
-              <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
-            </td>
-          </tr>
-          <tr class="completed">
-            <td class="checbox-cell"><input type="checkbox" checked></td>
-            <td class="text-cell">Task Description 4 Completed</td>
-            <td class="action-cell">
-              <button class="btn btn-sm btn-success" disabled><i class="bi bi-pencil-fill"></i></button>
-              <button class="btn btn-sm btn-danger" disabled><i class="bi bi-trash"></i></button>
-            </td>
-          </tr>
         </tbody>
       </table>
       <div>
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#task-modal">Create</button>
+        <button class="btn btn-primary btn-show-modal" data-bs-toggle="modal" data-bs-target="#task-modal">Create</button>
       </div>
     </div>
     <!-- Modal -->
@@ -69,16 +37,17 @@
           <div class="modal-body">
             <div class="mb-3">
               <label for="task-name" class="form-label">Task Name</label>
-              <textarea class="form-control" id="task-name" rows="3" placeholder="Please write your task"></textarea>
+              <textarea class="form-control task-modal" id="task-name" rows="3" placeholder="Please write your task"></textarea>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Create</button>
+            <button type="button" class="btn btn-secondary btn-close-dialog" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary btn-create">Create</button>
           </div>
         </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
